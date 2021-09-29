@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha_salida: 2021-09-29
+  fecha_entrada: 2021-09-29
+  book: one
+  user: one
+
+two:
+  fecha_salida: 2021-09-29
+  fecha_entrada: 2021-09-29
+  book: two
+  user: two
