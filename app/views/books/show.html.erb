@@ -1,0 +1,10 @@
+<h1>Mostrar datos del libro</h1>
+<hr>
+    <h3><strong>Titulo: </strong><%= @book.titulo %></h3>
+    <h3><strong>Idioma: </strong><%= @book.idioma %></h3>
+    <h3><strong>Paginas: </strong><%= @book.paginas %></h3>
+    <h3><strong>Autor: </strong><%unless @book.author.nil? %><%= @book.author.nombre %> <%end%></h3>
+    <h3><strong>Categoria: </strong><%unless @book.category.nil? %><%= @book.category.categoria %> <%end%></h3>
+    <h3><strong>Editorial: </strong><%unless @book.editorial.nil? %><%= @book.editorial.nombre %> <%end%></h3>
+     <h3><strong>Descripcion: </strong><%= @book.descripcion %></h3>
+<hr>

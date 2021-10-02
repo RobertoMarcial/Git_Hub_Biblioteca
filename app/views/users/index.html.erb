@@ -1,0 +1,25 @@
+<table>
+        <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>Edad</th>
+                    <th>Observacion</th>
+
+                </tr>
+        </thead>
+        <tbody>
+        <%@user.each do |usuario|  %>
+                <tr>
+                    <td><%= usuario.nombre %></td>
+                    <td><%= usuario.telefono %></td>
+                    <td><%= usuario.direccion %></td>
+                    <td><%= usuario.edad %></td>
+                    <td><%= usuario.observaciones %></td>
+                </tr>
+        <%end%>
+        </tbody>
+
+
+</table>

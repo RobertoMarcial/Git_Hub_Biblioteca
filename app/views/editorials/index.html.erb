@@ -1,0 +1,23 @@
+<table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Pais</th>
+                <th>Telefono</th>
+            </tr>
+        
+        </thead>
+
+        <tbody>
+            <%@editoriales.each do |edit| %>
+                <tr>
+                    <td><%= edit.nombre %></td>
+                    <td><%= edit.pais %></td>
+                    <td><%= edit.telefono %></td>
+                
+                </tr>
+            <%end%>
+        </tbody>
+
+
+</table>

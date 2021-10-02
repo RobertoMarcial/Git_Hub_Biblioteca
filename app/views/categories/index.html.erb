@@ -1,0 +1,17 @@
+<table>
+        <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Descripcion</th>
+                </tr>
+        </thead>
+        <tbody>
+            <% @categorias.each do |categoria| %>
+                <tr>
+                    <td><%= categoria.categoria %></td>
+                    <td><%= categoria.descripcion %></td>
+                </tr>
+            <%end%>
+        </tbody>
+           
+</table>

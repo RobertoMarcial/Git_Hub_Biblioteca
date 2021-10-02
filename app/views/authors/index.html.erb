@@ -1,0 +1,18 @@
+<table>
+    <thead>
+          <tr>
+                <th>Nombre</th>
+                <th>Nacionalidad</th>
+                <th>Idioma</th>
+          </tr>
+    </thead>
+    <tbody>
+        <%@autores.each do |autor|%>
+        <tr>
+            <td><%= autor.nombre %></td>
+            <td><%= autor.nacionalidad %></td>
+            <td><%= autor.idioma %></td>
+        </tr>       
+        <% end %>
+    </tbody>
+</table>
