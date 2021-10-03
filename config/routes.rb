@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'categories/edit'
   get 'categories/update'
   get 'categories/delete'
+  get 'category/:id', to: 'categories#show'
+  
   get 'users/index'
   get 'users/show'
   get 'users/new'
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   get 'users/edit'
   get 'users/update'
   get 'users/delete'
+  get 'user/:id', to: 'users#show'
+
   get 'editorials/index'
   get 'editorials/show'
   get 'editorials/new'
@@ -20,6 +24,8 @@ Rails.application.routes.draw do
   get 'editorials/edit'
   get 'editorials/update'
   get 'editorials/delete'
+  get 'editorial/:id',to: 'editorials#show'
+
   get 'books/index'
   get 'books/show'
   get 'books/new'

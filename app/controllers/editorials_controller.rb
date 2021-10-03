@@ -4,6 +4,7 @@ class EditorialsController < ApplicationController
   end
 
   def show
+    @editorial = Editorial.find(params[:id])
   end
 
   def new

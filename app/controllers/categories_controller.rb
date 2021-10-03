@@ -4,6 +4,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
+    @categoria = Category.find(params[:id])
   end
 
   def new
