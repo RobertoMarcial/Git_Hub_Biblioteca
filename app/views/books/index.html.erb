@@ -28,7 +28,7 @@
                   <%unless book.editorial.nil?  %>
                 <td> <%=book.editorial.nombre %> </td> 
                 <%end%> 
-
+                <td><%= link_to "Mostrar", action: 'show', id: book.id %></td>
          </tr>   
      <% end %>
     </tbody>

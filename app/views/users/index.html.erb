@@ -17,6 +17,7 @@
                     <td><%= usuario.direccion %></td>
                     <td><%= usuario.edad %></td>
                     <td><%= usuario.observaciones %></td>
+                    <td><%= link_to "Mostrar", action: 'show', id: usuario.id %></td>
                 </tr>
         <%end%>
         </tbody>
