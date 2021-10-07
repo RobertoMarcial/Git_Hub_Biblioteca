@@ -43,9 +43,11 @@ class AuthorsController < ApplicationController
     idioma_autor = datos_autor[:idioma]
     ganacias_autor = datos_autor[:ganacias_anuales]
 
-    @author.update(nombre: nombre_autor, nacionalidad: nac_autor,idioma: idioma_autor, ganacias_anuales: ganacias_autor)
-
-    redirect_to "/author/#{@author.id}"
+    if @author.update(nombre: nombre_autor, nacionalidad: nac_autor,idioma: idioma_autor, ganacias_anuales: ganacias_autor)
+        redirect_to "/author/#{@author.id}"
+    else  
+       render :edit
+    end
   end
 
   def delete
