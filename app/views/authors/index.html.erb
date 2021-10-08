@@ -11,15 +11,6 @@
           </tr>
     </thead>
     <tbody>
-        <%@autores.each do |autor|%>
-        <tr>
-            <td><%= autor.nombre %></td>
-            <td><%= autor.nacionalidad %></td>
-            <td><%= autor.idioma %></td>
-            <td><%= link_to "Mostrar", action: 'show', id: autor.id %></td>
-            <td><%= link_to "Editar", action: 'edit', id:autor.id %></td>
-            <td><%= link_to "Borrar",{action: 'delete',id:autor.id}, method: :delete,data: {confirm: 'Borrar este autor?'} %></td>
-        </tr>       
-        <% end %>
+       <%= render partial: "autor", collection: @autores %>
     </tbody>
 </table>
