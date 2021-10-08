@@ -53,12 +53,11 @@ class AuthorsController < ApplicationController
     end
   end
 
-  def delete
-    @author = Author.find(params[:id])
-
-    @author.destroy
-    redirect_to "/authors/index"
-
+  def destroy
+    
+    @author = Author.find_by_id(params[:id])
+    @author.delete
+    redirect_to authors_path
 
   end
 end
