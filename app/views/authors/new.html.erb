@@ -1,6 +1,6 @@
 <br>
 <br>
-<%= link_to 'Back',"/authors/index" %>
+<%= link_to 'Back',authors_path %>
 <h1>Crear nuevo autor</h1>
 <%= form_for @author, url: {action: "create"}, html: {class:"css_class"} do |autor| %>
  <label><strong>Nombre: </strong></label>

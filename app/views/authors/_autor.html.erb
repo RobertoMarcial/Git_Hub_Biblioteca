@@ -4,8 +4,8 @@
             <td><%= autor.nacionalidad %></td>
             <td><%= autor.idioma %></td>
             
-            <td><%= link_to "Mostrar", action: 'show', id: autor.id %></td>
-            <td><%= link_to "Editar", action: 'edit', id:autor.id %></td>
-            <td><%= link_to "Borrar",{action: 'delete',id:autor.id}, method: :delete,data: {confirm: 'Borrar este autor?'} %></td>
+            <td><%= link_to "Mostrar", author_path(autor)%></td>
+            <td><%= link_to "Editar", edit_author_path(autor) %></td>
+            <td><%= link_to "Borrar", autor, method: :delete, data: {confirm: '¿Quieres borrar este autor ?'} %></td>
         </tr>       
       

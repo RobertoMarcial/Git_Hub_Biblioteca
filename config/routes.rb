@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :authors
+
   get 'categories/index'
   get 'categories/show'
   get 'categories/new'
@@ -35,14 +38,7 @@ Rails.application.routes.draw do
   get 'books/delete'
   get 'book/:id', to:'books#show'
 
-  get 'authors/index'
-  get 'authors/show'
-  get 'authors/new'
-  post 'authors/create'
-  get 'authors/edit'
-  patch 'authors/update'
-  delete 'authors/delete'
-  get 'author/:id', to:'authors#show'
+ 
  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

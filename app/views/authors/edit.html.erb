@@ -1,5 +1,5 @@
 
-<%= link_to 'Back', "/authors/index" %>
+<%= link_to 'Back', authors_path %>
 <h1>Editar autor</h1>
 <%= form_for @author, url:{action: "update", id:@author.id}, html: {class: "css_class"} do |f| %>
 <%= f.text_field :nombre %>

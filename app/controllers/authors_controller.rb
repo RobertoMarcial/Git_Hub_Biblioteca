@@ -29,7 +29,7 @@ class AuthorsController < ApplicationController
 
     #por ultimo el modelo recientemente creado se guarda en la base de datos
     @author.save
-    redirect_to "/author/#{@author.id}"
+    redirect_to author_path(@author)
 
   end
 
@@ -47,7 +47,7 @@ class AuthorsController < ApplicationController
     ganacias_autor = datos_autor[:ganacias_anuales]
 
     if @author.update(nombre: nombre_autor, nacionalidad: nac_autor,idioma: idioma_autor, ganacias_anuales: ganacias_autor)
-        redirect_to "/author/#{@author.id}"
+        redirect_to author_path(@author)
     else  
        render :edit
     end
