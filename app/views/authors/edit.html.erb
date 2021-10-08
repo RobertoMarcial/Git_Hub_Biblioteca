@@ -1,16 +1,5 @@
 
-<%= link_to 'Back', authors_path %>
+<%= link_to 'volver a la lista', authors_path %>
 <h1>Editar autor</h1>
-<%= form_for @author, url:{action: "update", id:@author.id}, html: {class: "css_class"} do |f| %>
-<%= f.text_field :nombre %>
-<br><br>
-<%= f.text_field :nacionalidad %>
-<br><br>
-<%= f.text_field :idioma %>
-<br><br>
-<%= f.text_field :ganacias_anuales%>
-<br><br>
-
-<%= f.submit "Editar autor" %>
-
-<% end %>
+<br>
+<%= render 'form' %>

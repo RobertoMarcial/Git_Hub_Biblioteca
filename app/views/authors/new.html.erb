@@ -1,19 +1,6 @@
 <br>
 <br>
-<%= link_to 'Back',authors_path %>
+<%= link_to 'Volver a la lista',authors_path %>
 <h1>Crear nuevo autor</h1>
-<%= form_for @author, url: {action: "create"}, html: {class:"css_class"} do |autor| %>
- <label><strong>Nombre: </strong></label>
- <%= autor.text_field :nombre %>
- <br><br>
-<label><strong>Nacionalidad: </strong></label>
- <%= autor.text_field :nacionalidad %>
-<br><br>
-<label><strong>Idioma: </strong></label>
-<%= autor.text_field :idioma%>
-<br><br>
-<label><strong>Ganancias</strong></label>
-<%= autor.text_field :ganacias_anuales %>
-<br><br>
-<%= autor.submit "Crear autor" %>
-<% end %>
+<br>
+<%= render 'form' %>
