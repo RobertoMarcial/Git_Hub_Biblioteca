@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   resources :authors
-  resources :users
+  namespace :admin do
+    resources :users
+end
   
 
   get 'categories/index'
