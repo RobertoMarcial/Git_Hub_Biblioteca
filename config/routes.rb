@@ -4,16 +4,13 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
 end
+
+scope :editores do 
+  resources :categories
+end
   
 
-  get 'categories/index'
-  get 'categories/show'
-  get 'categories/new'
-  get 'categories/create'
-  get 'categories/edit'
-  get 'categories/update'
-  get 'categories/delete'
-  get 'category/:id', to: 'categories#show'
+  
   
   
 
