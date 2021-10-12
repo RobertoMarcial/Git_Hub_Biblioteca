@@ -11,9 +11,13 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def create
+    datos_usuario = params[:id]
+
+    
   end
 
   def edit
