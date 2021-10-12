@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   resources :authors
+  resources :users
+  
 
   get 'categories/index'
   get 'categories/show'
@@ -11,14 +13,7 @@ Rails.application.routes.draw do
   get 'categories/delete'
   get 'category/:id', to: 'categories#show'
   
-  get 'users/index'
-  get 'users/show'
-  get 'users/new'
-  get 'users/create'
-  get 'users/edit'
-  get 'users/update'
-  get 'users/delete'
-  get 'user/:id', to: 'users#show'
+  
 
   get 'editorials/index'
   get 'editorials/show'
