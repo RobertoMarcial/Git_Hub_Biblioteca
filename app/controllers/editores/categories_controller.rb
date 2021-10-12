@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class Editores::CategoriesController < ApplicationController
   def index
     @categorias = Category.all
   end

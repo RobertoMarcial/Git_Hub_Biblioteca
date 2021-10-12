@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :users
 end
 
-scope :editores do 
+scope module: 'editores' do 
   resources :categories
 end
   
