@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  
+  
+  resources :books
+
 
   resources :authors
   namespace :admin do
@@ -8,10 +12,19 @@ end
 scope module: 'editores' do 
   resources :categories
 end
+
+resources :users do
+  resources :books, :borrowings
+end
   
+
 resources :editorials do
   resources :books
 
+end
+
+resources :authors do 
+  resources :books
 end
   
 
