@@ -23,9 +23,24 @@ class BooksController < ApplicationController
   end
 
   def new
+      @book = Book.new
   end
 
   def create
+    datos_libro =  params[:book]
+
+    titulo_lib = datos_libro[:titulo]
+    idioma_lib = datos_libro[:idioma]
+    paginas_lib = datos_libro[:paginas]
+    descripcion_lib = datos_libro[:descripcion]
+    autor_lib = datos_libro[:author_id]
+    categoria_lib = datos_libro[:category_id]
+
+    @book = Book.new(titulo: titulo_lib, idioma: idioma_lib, paginas: paginas_lib, descripcion: descripcion_lib, author_id: autor_lib, category_id: categoria_lib)
+
+    @book.save
+
+    redirect_to book_path
   end
 
   def edit

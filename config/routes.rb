@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
   
   
+  root 'welcome#index'
+  
+  
   resources :books
 
-
   resources :authors
+  
   namespace :admin do
-    resources :users
-end
+   resources :users
+  end
 
 scope module: 'editores' do 
   resources :categories
