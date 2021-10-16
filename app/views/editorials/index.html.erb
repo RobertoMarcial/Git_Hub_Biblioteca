@@ -1,3 +1,7 @@
+<br>
+<br>
+<%= link_to 'Ingresar Nuevo', new_editorial_path %>
+ 
 <table>
         <thead>
             <tr>
@@ -7,17 +11,10 @@
             </tr>
         
         </thead>
-
+        
         <tbody>
-            <%@editoriales.each do |edit| %>
-                <tr>
-                    <td><%= edit.nombre %></td>
-                    <td><%= edit.pais %></td>
-                    <td><%= edit.telefono %></td>
-                    <td><%= link_to 'Mostrar libros', editorial_books_path(edit) %></td>
-                
-                </tr>
-            <%end%>
+        
+         <%= render partial: "editorial" , collection: @editoriales%>
         </tbody>
 
 

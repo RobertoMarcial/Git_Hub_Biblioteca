@@ -8,9 +8,21 @@ class EditorialsController < ApplicationController
   end
 
   def new
+    @editorial = Editorial.new
   end
 
   def create
+    datos_editorial = params[:editorial]
+
+    nom_editorial = datos_editorial[:nombre]
+    pais_editorial = datos_editorial[:pais]
+    tel_editorial = datos_editorial[:telefono]
+
+    @editorial = Editorial.new(nombre: nom_editorial, pais: pais_editorial, telefono: tel_editorial)
+
+    @editorial.save
+    redirect_to editorial_path
+
   end
 
   def edit
