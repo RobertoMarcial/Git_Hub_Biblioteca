@@ -1,0 +1,10 @@
+ 
+
+ <tr>
+    <td><%= editorial.nombre %></td>
+    <td><%= editorial.pais %></td>
+    <td><%= editorial.telefono %></td>
+    <!--Voy a remplazar editorial_books_path(editorial) por editorial_path(editorial)-->
+    <td><%= link_to 'Mostrar', editorial_path(editorial) %></td>
+     <td> <%= link_to 'Mostrar libro', editorial_books_path(editorial) %></td>
+</tr>
