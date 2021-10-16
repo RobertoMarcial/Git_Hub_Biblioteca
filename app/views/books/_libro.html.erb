@@ -1,3 +1,4 @@
+      
      <tr>
                 <td><%= libro.titulo %></td>
                 <td><%= libro.idioma %></td>
@@ -14,4 +15,5 @@
                 <td> <%=libro.editorial.nombre %> </td> 
                 <%end%> 
                 <td><%= link_to "Mostrar", action: 'show', id: libro.id %></td>
+                <td><%= link_to "Editar",edit_book_path(libro) %></td>
     </tr>   
