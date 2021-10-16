@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+ layout "layout_book"
+ 
   def index
     if params[:editorial_id]
       @books =  Editorial.find(params[:editorial_id]).books
@@ -72,6 +74,9 @@ class BooksController < ApplicationController
 
   end
 
-  def delete
+  def destroy
+    @book = Book.find(params[:id])
+    @book.delete
+    redirect_to books_path
   end
 end
