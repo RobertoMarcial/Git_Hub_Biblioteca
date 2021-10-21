@@ -39,11 +39,18 @@ class BooksController < ApplicationController
     categoria_lib = datos_libro[:category_id]
     editorial_lib = datos_libro[:editorial_id]
 
-    @book = Book.new(titulo: titulo_lib, idioma: idioma_lib, paginas: paginas_lib, descripcion: descripcion_lib, author_id: autor_lib, category_id: categoria_lib, editorial_id: editorial_lib)
-    @book.save
-
-    redirect_to book_path(@book)
-  end
+   @book = Book.new(titulo: titulo_lib, idioma: idioma_lib, paginas: paginas_lib, descripcion: descripcion_lib, author_id: autor_lib, category_id: categoria_lib, editorial_id: editorial_lib)
+    if @book.valid?
+        @book.save
+        redirect_to books_path
+    else
+       render :edit
+       
+    end
+    
+         
+    
+    end
 
   def edit
     @book = Book.find(params[:id])
@@ -75,7 +82,9 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = Book.find(params[:id])
+    
+
+   @book = Book.find(params[:id])
     @book.delete
     redirect_to books_path
   end

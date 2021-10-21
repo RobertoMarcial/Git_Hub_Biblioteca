@@ -8,6 +8,7 @@
         <tbody>
             <% @categorias.each do |categoria| %>
                 <tr>
+                    <td><%= categoria.id %></td>
                     <td><%= categoria.categoria %></td>
                     <td><%= categoria.descripcion %></td>
                     <td><%= link_to "Mostrar", action: 'show', id: categoria.id %></td>
