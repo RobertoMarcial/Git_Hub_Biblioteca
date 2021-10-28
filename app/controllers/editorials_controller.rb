@@ -49,12 +49,23 @@ class EditorialsController < ApplicationController
 #NO se que vergas hice con esto pero ya funciona me daba un error al momento de elimanar el dato ya que la tabla books contenia
 #el id de editorial pero acomode en el modelo editorial esto :dependent => :destroy y le puse destroy en @editorial.destroy :v
   def destroy
-  @editorial = Editorial.find(params[:id])
-  if @editorial.destroy
-     redirect_to editorials_path, notice: "Usuario elimnado"
-  else
-    render :edit, notice: "Error"
-  end
+  @editorial_id = Editorial.find(params[:id])
+  
+  books = Editorial.verificar_fk
+
+    if books == true
+       @editorial_id.destroy
+       redirect_to editorials_path, notice: "Se elimino correctamente"
+    else
+        redirect_to editorials_path , notice: "No se pudo eliminar de la base de datos ya que se encuentra asociada con otro libro"
+    end
+       
+ 
+  # if @editorial.destroy
+  #   redirect_to editorials_path, notice: "Usuario elimnado"
+ # else
+  #  render :edit, notice: "Error"
+  #end
 
 
   end
