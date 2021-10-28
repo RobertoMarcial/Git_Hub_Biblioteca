@@ -1,23 +1,22 @@
+<br>
+<br>
+<%= flash[:notice] %>
+<%= link_to 'Ingresar Nuevo', new_editorial_path %>
+ 
 <table>
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Nombre</th>
                 <th>Pais</th>
                 <th>Telefono</th>
             </tr>
         
         </thead>
-
+        
         <tbody>
-            <%@editoriales.each do |edit| %>
-                <tr>
-                    <td><%= edit.nombre %></td>
-                    <td><%= edit.pais %></td>
-                    <td><%= edit.telefono %></td>
-                    <td><%= link_to "Mostrar", action: 'show', id: edit.id %></td>
-                
-                </tr>
-            <%end%>
+        
+         <%= render partial: "editorial" , collection: @editoriales%>
         </tbody>
 
 

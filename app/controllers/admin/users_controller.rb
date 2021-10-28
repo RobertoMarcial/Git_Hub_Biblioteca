@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Admin::UsersController < ApplicationController
   
   layout "layout_user"
   
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    datos_usuario = params[:id]
+    
 
     
   end

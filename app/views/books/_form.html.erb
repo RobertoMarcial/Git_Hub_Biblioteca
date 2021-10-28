@@ -1,0 +1,29 @@
+<%= form_for @book, html: {class:" css_class"} do |f| %>
+ <label><strong>Titulo: </strong></label>
+ <%= f.text_field :titulo %>
+ <br><br>
+<label><strong>Idioma: </strong></label>
+<%= f.text_field :idioma %>
+
+<br><br>
+<label><strong>Paginas: </strong></label>
+<%= f.text_field :paginas %>
+<br><br>
+<label><strong>Descricpcion: </strong></label>
+<%= f.text_field :descripcion %>
+<br><br>
+<label><strong>Autor: </strong></label>
+<%= f.text_field :author_id %>
+<br><br>
+<label><strong>Categoria:  </strong></label>
+<%= f.text_field :category_id %>
+<br><br>
+<label><strong>Editorial: </strong></label>
+<%= f.text_field :editorial_id %>
+<br><br>
+
+<%= f.submit @book.new_record?? "Ingresar" : "Actualizar" %>
+
+
+
+<% end %>

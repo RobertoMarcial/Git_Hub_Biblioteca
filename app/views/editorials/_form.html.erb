@@ -1,0 +1,18 @@
+<%= form_for @editorial, html: {class:" css_class"} do |f| %>
+<label><strong>Nombre: </strong></label>
+<%= f.text_field :nombre %>
+<br><br>
+<label><strong>Pais: </strong></label>
+<%= f.text_field :pais %>
+<br><br>
+<label><strong>Telefono: </strong></label>
+<%= f.text_field :telefono %>
+<br><br>
+
+<%= f.submit @editorial.new_record?? "Ingresar" : "Actualizar" %>
+
+
+
+    
+
+<% end %>

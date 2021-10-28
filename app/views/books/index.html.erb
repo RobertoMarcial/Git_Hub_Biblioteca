@@ -1,6 +1,10 @@
+
+<%= link_to 'Ingresar libro', new_book_path%>
+
 <table>
     <thead>
           <tr>
+              <th>Id</th>
               <th>Titulo</th>
               <th>Idioma</th>
               <th>Paginas</th>
@@ -12,24 +16,7 @@
           </tr>
     </thead>
     <tbody>
-    <% @books.each do |book|%>
-         <tr>
-                <td><%= book.titulo %></td>
-                <td><%= book.idioma %></td>
-                <td><%= book.paginas %></td>
-                <td><%= book.descripcion %></td>
-
-                 <%unless book.author.nil?  %>
-                <td> <%=book.author.nombre %> </td> 
-                <%end%>  
-                 <%unless book.category.nil?  %>
-                <td> <%=book.category.categoria %> </td> 
-                <%end%> 
-                  <%unless book.editorial.nil?  %>
-                <td> <%=book.editorial.nombre %> </td> 
-                <%end%> 
-                <td><%= link_to "Mostrar", action: 'show', id: book.id %></td>
-         </tr>   
-     <% end %>
+    <!--render partial: libro es el formulario _form de books y @books es la variable de instancia que viene del controlador books del metodof index -->
+    <%= render partial: "libro", collection: @books %>
     </tbody>
 </table>

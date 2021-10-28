@@ -1,0 +1,21 @@
+      
+     <tr> 
+                <td><%= libro.id %></td>
+                <td><%= libro.titulo %></td>
+                <td><%= libro.idioma %></td>
+                <td><%= libro.paginas %></td>
+                <td><%= libro.descripcion %></td>
+
+                 <%unless libro.author.nil?  %>
+                <td> <%=libro.author.nombre %> </td> 
+                <%end%>  
+                 <%unless libro.category.nil?  %>
+                <td> <%=libro.category.categoria %> </td> 
+                <%end%> 
+                  <%unless libro.editorial.nil?  %>
+                <td> <%=libro.editorial.nombre %> </td> 
+                <%end%> 
+                <td><%= link_to "Mostrar", action: 'show', id: libro.id %></td>
+                <td><%= link_to "Editar",edit_book_path(libro) %></td>
+                <td><%= link_to "Eliminar",libro, method: :delete, data: {confirm: 'Quieres eliminar este libro ?'} %></td>
+    </tr>   
